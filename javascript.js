@@ -19,3 +19,21 @@ function getComputerChoice() {
         return "scissors";
     }
 }
+
+//Step 3: Get human choice
+//via prompt() to return the user inputted string "rock," "paper," or "scissors"
+//given that the input is one of the 3 valid string options, otherwise asks again
+function getHumanChoice() {
+    flag = 0;
+    inputString = prompt("To make your play, enter 'rock', 'paper', or 'scissors'");
+
+    while (flag == 0) {
+        if (inputString == "rock" || inputString == "paper" || inputString == "scissors") {
+            flag = 1;
+            return inputString;
+        }
+        else {
+            inputString = prompt("Invalid play, please enter 'rock', 'paper', or 'scissors'");
+        }
+    }
+}
